@@ -1,6 +1,6 @@
 # Tin Aung — Cybersecurity Portfolio
 
-Personal portfolio website for Tin Aung, U.S. Navy veteran and cybersecurity engineering graduate student at the University of San Diego.
+Personal portfolio website for Tin Aung, U.S. Navy veteran and cybersecurity engineering graduate of the University of San Diego.
 
 ## Stack
 
@@ -39,6 +39,6 @@ Drop the directory onto any static host — GitHub Pages, Netlify, Cloudflare Pa
 - **About** — Education, military background, focus areas
 - **Certifications** — CompTIA Security+ and CySA+
 - **Technical Skills** — Grouped by category
-- **Projects** — Five lab/academic projects as cards
+- **Academic Projects** — Five lab/academic projects as cards
 - **Experience** — U.S. Navy timeline entry
 - **Contact** — Email, GitHub, LinkedIn
