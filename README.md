@@ -20,6 +20,7 @@ portfolio/
 ├── js/
 │   └── main.js         # Mobile nav toggle + active scroll highlight
 ├── security-dashboard/ # Interactive SentinelOps SOC dashboard
+├── security-control-assessment/ # NIST CSF 2.0 assessment and roadmap tool
 ├── assets/
 │   └── icons/          # Placeholder for icons or images
 └── README.md

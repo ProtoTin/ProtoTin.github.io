@@ -460,7 +460,6 @@ section:nth-of-type(even) { background-color: var(--bg-secondary); }
 }
 
 .project-card--featured {
-  grid-column: 1 / -1;
   position: relative;
   overflow: hidden;
   border-color: var(--border-accent);

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An interactive NIST CSF 2.0-aligned security control assessment for a fictional small organization.">
+  <meta name="theme-color" content="#f3f0e8">
+  <title>Northstar | NIST CSF 2.0 Security Control Assessment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="Return to Tin Aung portfolio">
+      <span class="brand-mark">N</span>
+      <span><strong>Northstar</strong><small>Security Control Assessment</small></span>
+    </a>
+    <nav aria-label="Project navigation">
+      <a href="#assessment">Assessment</a>
+      <a href="#roadmap">Roadmap</a>
+      <a class="portfolio-link" href="../">Portfolio ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">NIST CSF 2.0 // Interactive portfolio project</p>
+        <h1>Turn security gaps into a practical roadmap.</h1>
+        <p class="hero-intro">Assess a fictional small organization across the six NIST Cybersecurity Framework functions, compare current maturity with a target state, and prioritize the next actions.</p>
+        <div class="hero-actions">
+          <a class="primary-action" href="#assessment">Begin assessment</a>
+          <a class="text-action" href="https://doi.org/10.6028/NIST.CSWP.29" target="_blank" rel="noopener noreferrer">Read NIST CSF 2.0 ↗</a>
+        </div>
+      </div>
+      <aside class="scenario-card" aria-label="Fictional organization scenario">
+        <p class="card-label">Assessment scenario</p>
+        <h2>Harborlight Services</h2>
+        <dl>
+          <div><dt>Industry</dt><dd>Professional services</dd></div>
+          <div><dt>Employees</dt><dd>85</dd></div>
+          <div><dt>Environment</dt><dd>Hybrid cloud</dd></div>
+          <div><dt>Target</dt><dd>Tier 3 · Repeatable</dd></div>
+        </dl>
+        <p class="scenario-note">Fictional organization and simulated control data.</p>
+      </aside>
+    </section>
+
+    <section class="framework-strip" aria-label="NIST CSF 2.0 functions">
+      <div><span>GV</span><strong>Govern</strong></div>
+      <div><span>ID</span><strong>Identify</strong></div>
+      <div><span>PR</span><strong>Protect</strong></div>
+      <div><span>DE</span><strong>Detect</strong></div>
+      <div><span>RS</span><strong>Respond</strong></div>
+      <div><span>RC</span><strong>Recover</strong></div>
+    </section>
+
+    <section class="assessment-shell" id="assessment">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Current profile</p>
+          <h2>Control maturity assessment</h2>
+          <p>Choose the maturity tier that best describes each fictional control. Scores update immediately and save in this browser.</p>
+        </div>
+        <div class="assessment-actions">
+          <button type="button" id="reset-baseline">Restore baseline</button>
+          <button type="button" id="download-summary">Download summary</button>
+        </div>
+      </div>
+
+      <div class="tier-legend" aria-label="Maturity tier definitions">
+        <div><span>1</span><strong>Partial</strong><small>Ad hoc</small></div>
+        <div><span>2</span><strong>Risk Informed</strong><small>Approved, inconsistent</small></div>
+        <div><span>3</span><strong>Repeatable</strong><small>Defined and reviewed</small></div>
+        <div><span>4</span><strong>Adaptive</strong><small>Continuously improving</small></div>
+      </div>
+
+      <div class="workspace">
+        <div class="functions" id="function-assessments"></div>
+
+        <aside class="scorecard" aria-live="polite">
+          <p class="card-label">Current maturity</p>
+          <div class="overall-score"><strong id="overall-score">0.0</strong><span>/ 4.0</span></div>
+          <p class="tier-result" id="tier-result">Not assessed</p>
+          <div class="target-line"><span>Target profile</span><strong>3.0 · Repeatable</strong></div>
+          <div class="score-breakdown" id="score-breakdown"></div>
+          <div class="gap-summary">
+            <div><strong id="gap-count">0</strong><span>Controls below target</span></div>
+            <div><strong id="priority-count">0</strong><span>Priority gaps</span></div>
+          </div>
+          <p class="save-status" id="save-status">Baseline scenario loaded</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="roadmap-section" id="roadmap">
+      <div class="section-heading roadmap-heading">
+        <div>
+          <p class="eyebrow">Target profile</p>
+          <h2>Remediation roadmap</h2>
+          <p>Actions are prioritized by control importance and the gap between current and target maturity.</p>
+        </div>
+        <div class="roadmap-filters" aria-label="Filter roadmap by phase">
+          <button class="active" type="button" data-phase="all">All</button>
+          <button type="button" data-phase="now">0–30 days</button>
+          <button type="button" data-phase="next">31–90 days</button>
+          <button type="button" data-phase="later">91–180 days</button>
+        </div>
+      </div>
+      <div class="roadmap-list" id="roadmap-list"></div>
+      <div class="complete-state" id="complete-state" hidden>
+        <strong>Target profile achieved</strong>
+        <p>No sampled controls are below Tier 3.</p>
+      </div>
+    </section>
+
+    <section class="methodology">
+      <div>
+        <p class="eyebrow">Methodology &amp; disclosure</p>
+        <h2>What this assessment represents</h2>
+      </div>
+      <div class="method-grid">
+        <p>This educational tool samples selected outcomes from the NIST CSF 2.0 Core. It is not an official NIST assessment, compliance audit, certification, or substitute for a complete organizational profile.</p>
+        <p>The four maturity labels reference NIST CSF Tiers, while the numeric averaging and roadmap prioritization are project-specific methods created for this demonstration.</p>
+        <p>Scenario, direction, and content by Tin Aung. Design and code created with OpenAI Codex. No assessment data leaves the visitor’s browser.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Northstar · NIST CSF 2.0-aligned educational project</p>
+    <div><a href="https://doi.org/10.6028/NIST.CSWP.29" target="_blank" rel="noopener noreferrer">Official NIST publication ↗</a><a href="../">Return to portfolio</a></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
