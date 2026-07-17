@@ -682,6 +682,13 @@ footer {
   letter-spacing: 0.05em;
 }
 
+.footer-credit {
+  margin-top: 9px;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  text-align: center;
+}
+
 /* ============================================================
    Responsive — Tablet
    ============================================================ */

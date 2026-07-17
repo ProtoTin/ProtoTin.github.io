@@ -2,6 +2,10 @@
 
 Personal portfolio website for Tin Aung, U.S. Navy veteran and cybersecurity engineering graduate of the University of San Diego.
 
+## Development Disclosure
+
+The site's direction, professional content, and final decisions are Tin Aung's. The design and code were created with OpenAI Codex. SentinelOps is a front-end demonstration and uses simulated security telemetry rather than live operational data.
+
 ## Stack
 
 Plain HTML5, CSS3, and vanilla JavaScript. No frameworks, no build tools, no dependencies.
@@ -15,6 +19,7 @@ portfolio/
 │   └── style.css       # All styles (dark theme, fully responsive)
 ├── js/
 │   └── main.js         # Mobile nav toggle + active scroll highlight
+├── security-dashboard/ # Interactive SentinelOps SOC dashboard
 ├── assets/
 │   └── icons/          # Placeholder for icons or images
 └── README.md
@@ -39,6 +44,7 @@ Drop the directory onto any static host — GitHub Pages, Netlify, Cloudflare Pa
 - **About** — Education, military background, focus areas
 - **Certifications** — CompTIA Security+ and CySA+
 - **Technical Skills** — Grouped by category
+- **Self-Directed Projects** — Independent projects with interactive launch links
 - **Academic Projects** — Five lab/academic projects as cards
 - **Experience** — U.S. Navy timeline entry
 - **Contact** — Email, GitHub, LinkedIn
