@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SentinelOps is an interactive cybersecurity operations dashboard built by Tin Aung.">
+  <meta name="theme-color" content="#05080f">
+  <title>SentinelOps | Security Operations Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="command-rail" aria-label="Dashboard navigation">
+      <a class="brand-mark" href="../" aria-label="Return to Tin Aung portfolio"><span>S</span></a>
+      <nav class="rail-nav">
+        <button class="rail-button active" type="button" data-section="overview" aria-label="Overview" aria-pressed="true"><span class="icon icon-grid"></span><span class="rail-label">Overview</span></button>
+        <button class="rail-button" type="button" data-section="alerts" aria-label="Alerts" aria-pressed="false"><span class="icon icon-pulse"></span><span class="rail-label">Alerts</span></button>
+        <button class="rail-button" type="button" data-section="assets" aria-label="Assets" aria-pressed="false"><span class="icon icon-diamond"></span><span class="rail-label">Assets</span></button>
+        <button class="rail-button" type="button" data-section="activity" aria-label="Response activity" aria-pressed="false"><span class="icon icon-lines"></span><span class="rail-label">Response</span></button>
+      </nav>
+      <div class="rail-spacer"></div>
+      <a class="rail-button portfolio-button" href="../" aria-label="Back to portfolio"><span class="icon icon-arrow"></span><span class="rail-label">Portfolio</span></a>
+    </aside>
+
+    <main>
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">SentinelOps // SOC-01</p>
+          <h1>Security Operations Center <span>/ Overview</span></h1>
+        </div>
+        <div class="topbar-meta">
+          <div class="monitor-status"><span class="status-dot"></span><span>All systems monitored</span></div>
+          <time id="utc-clock" datetime="">--:--:-- UTC</time>
+          <a class="analyst-avatar" href="../" aria-label="View Tin Aung portfolio">TA</a>
+        </div>
+      </header>
+
+      <div class="dashboard" id="overview">
+        <div class="demo-banner" role="note">
+          <span>Interactive portfolio project</span>
+          <p>Simulated SOC data for demonstration purposes</p>
+          <a href="../">Built by Tin Aung <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <section class="kpi-grid" aria-label="Key security metrics">
+          <article class="kpi-card critical">
+            <div class="kpi-head"><p>Critical alerts</p><span>24H</span></div>
+            <div class="kpi-row"><strong>3</strong><span class="trend negative">▲ 2</span></div>
+            <p class="kpi-note">Requires immediate triage</p>
+          </article>
+          <article class="kpi-card">
+            <div class="kpi-head"><p>Open incidents</p><span>LIVE</span></div>
+            <div class="kpi-row"><strong>7</strong><span class="trend">2 contained</span></div>
+            <p class="kpi-note">4 assigned · 1 investigating</p>
+          </article>
+          <article class="kpi-card warning">
+            <div class="kpi-head"><p>Vulnerable assets</p><span>SCAN</span></div>
+            <div class="kpi-row"><strong>12</strong><span class="trend warning-text">4 overdue</span></div>
+            <p class="kpi-note">Across 246 monitored assets</p>
+          </article>
+          <article class="kpi-card">
+            <div class="kpi-head"><p>Mean time to respond</p><span>30D</span></div>
+            <div class="kpi-row"><strong>18<small>m</small></strong><span class="trend positive">▼ 11%</span></div>
+            <p class="kpi-note">Target threshold: 25 minutes</p>
+          </article>
+        </section>
+
+        <section class="primary-grid">
+          <article class="panel alert-chart-panel">
+            <div class="panel-header">
+              <div><p class="panel-kicker">Telemetry</p><h2>Alert volume</h2></div>
+              <div class="range-control" aria-label="Alert volume time range">
+                <button type="button" data-range="6h">6H</button>
+                <button class="active" type="button" data-range="24h">24H</button>
+                <button type="button" data-range="7d">7D</button>
+              </div>
+            </div>
+            <div class="chart-area">
+              <div class="y-axis" aria-hidden="true"><span>60</span><span>40</span><span>20</span><span>0</span></div>
+              <div class="bar-chart" id="alert-chart" role="img" aria-label="Alert volume over the selected time range">
+                <button class="chart-bar" style="--height:36%" data-value="22" aria-label="22 alerts"></button>
+                <button class="chart-bar" style="--height:30%" data-value="19" aria-label="19 alerts"></button>
+                <button class="chart-bar" style="--height:42%" data-value="26" aria-label="26 alerts"></button>
+                <button class="chart-bar" style="--height:38%" data-value="23" aria-label="23 alerts"></button>
+                <button class="chart-bar" style="--height:51%" data-value="31" aria-label="31 alerts"></button>
+                <button class="chart-bar" style="--height:67%" data-value="41" aria-label="41 alerts"></button>
+                <button class="chart-bar hot" style="--height:88%" data-value="53" aria-label="53 alerts"></button>
+                <button class="chart-bar" style="--height:72%" data-value="44" aria-label="44 alerts"></button>
+                <button class="chart-bar" style="--height:56%" data-value="34" aria-label="34 alerts"></button>
+                <button class="chart-bar" style="--height:49%" data-value="30" aria-label="30 alerts"></button>
+                <button class="chart-bar hot" style="--height:92%" data-value="55" aria-label="55 alerts"></button>
+                <button class="chart-bar" style="--height:70%" data-value="43" aria-label="43 alerts"></button>
+                <button class="chart-bar" style="--height:61%" data-value="37" aria-label="37 alerts"></button>
+                <button class="chart-bar" style="--height:46%" data-value="28" aria-label="28 alerts"></button>
+                <button class="chart-bar" style="--height:53%" data-value="32" aria-label="32 alerts"></button>
+                <button class="chart-bar" style="--height:41%" data-value="25" aria-label="25 alerts"></button>
+              </div>
+              <div class="x-axis" id="chart-labels" aria-hidden="true"><span>00:00</span><span>06:00</span><span>12:00</span><span>18:00</span><span>Now</span></div>
+            </div>
+          </article>
+
+          <div class="side-stack">
+            <article class="panel severity-panel">
+              <div class="panel-header compact"><div><p class="panel-kicker">Last 24 hours</p><h2>Severity distribution</h2></div><span class="live-label">Live</span></div>
+              <div class="severity-content">
+                <div class="donut" role="img" aria-label="81 total alerts: 15 critical, 23 high, 19 medium, and 24 low"><div><strong>81</strong><span>Total</span></div></div>
+                <ul class="legend">
+                  <li><span class="legend-dot critical-dot"></span><span>Critical</span><strong>15</strong></li>
+                  <li><span class="legend-dot high-dot"></span><span>High</span><strong>23</strong></li>
+                  <li><span class="legend-dot medium-dot"></span><span>Medium</span><strong>19</strong></li>
+                  <li><span class="legend-dot low-dot"></span><span>Low</span><strong>24</strong></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="panel" id="assets">
+              <div class="panel-header compact"><div><p class="panel-kicker">Inventory</p><h2>Asset health</h2></div><span class="panel-total">246 total</span></div>
+              <div class="asset-list">
+                <div class="asset-row"><span>Protected</span><div class="meter"><i style="--width:88%;--color:var(--green)"></i></div><strong>217</strong></div>
+                <div class="asset-row"><span>Vulnerable</span><div class="meter"><i style="--width:39%;--color:var(--orange)"></i></div><strong>12</strong></div>
+                <div class="asset-row"><span>Unmonitored</span><div class="meter"><i style="--width:22%;--color:var(--red)"></i></div><strong>7</strong></div>
+                <div class="asset-row"><span>Maintenance</span><div class="meter"><i style="--width:31%;--color:var(--cyan)"></i></div><strong>10</strong></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="secondary-grid">
+          <article class="panel alerts-panel" id="alerts">
+            <div class="panel-header alerts-heading">
+              <div><p class="panel-kicker">Detection queue</p><h2>Recent alerts</h2></div>
+              <div class="filter-control" aria-label="Filter alerts by severity">
+                <button class="active" type="button" data-filter="all">All</button>
+                <button type="button" data-filter="critical">Critical</button>
+                <button type="button" data-filter="high">High</button>
+              </div>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Detection</th><th>Severity</th><th>Source</th><th>Time</th><th>State</th></tr></thead>
+                <tbody id="alert-table">
+                  <tr tabindex="0" data-severity="critical" data-alert="DET-9482"><td><strong>Brute-force attempt</strong><span>DET-9482 · AUTH</span></td><td><span class="severity-tag critical-tag">Critical</span></td><td>VPN-Gateway-02</td><td>14:29:41</td><td><span class="state-tag">Triage</span></td></tr>
+                  <tr tabindex="0" data-severity="high" data-alert="DET-9479"><td><strong>Suspicious PowerShell</strong><span>DET-9479 · ENDPOINT</span></td><td><span class="severity-tag high-tag">High</span></td><td>FIN-WS-118</td><td>14:22:07</td><td><span class="state-tag">Open</span></td></tr>
+                  <tr tabindex="0" data-severity="high" data-alert="DET-9468"><td><strong>Malware signature</strong><span>DET-9468 · EDR</span></td><td><span class="severity-tag high-tag">High</span></td><td>ENG-LT-044</td><td>14:16:32</td><td><span class="state-tag contained">Contained</span></td></tr>
+                  <tr tabindex="0" data-severity="medium" data-alert="DET-9461"><td><strong>Unusual outbound traffic</strong><span>DET-9461 · NETWORK</span></td><td><span class="severity-tag medium-tag">Medium</span></td><td>DB-PROD-01</td><td>14:08:56</td><td><span class="state-tag">Review</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-help">Select an alert to inspect detection context.</p>
+          </article>
+
+          <article class="panel activity-panel" id="activity">
+            <div class="panel-header compact"><div><p class="panel-kicker">IR timeline</p><h2>Response activity</h2></div><span class="panel-total">4 actions</span></div>
+            <ol class="activity-list">
+              <li><span class="activity-node">01</span><div><strong>Host FIN-WS-118 isolated</strong><p>Endpoint containment completed by Analyst A. Chen.</p></div><time>2m</time></li>
+              <li><span class="activity-node">02</span><div><strong>Credentials revoked</strong><p>Compromised account disabled across SSO.</p></div><time>8m</time></li>
+              <li><span class="activity-node">03</span><div><strong>Evidence package created</strong><p>Memory image attached to incident INC-2071.</p></div><time>16m</time></li>
+              <li><span class="activity-node">04</span><div><strong>Playbook escalated</strong><p>IR-04 moved to active investigation.</p></div><time>24m</time></li>
+            </ol>
+          </article>
+        </section>
+
+        <footer>
+          <p>SentinelOps is a front-end demonstration using simulated security telemetry.</p>
+          <a href="../">Return to Tin Aung's portfolio</a>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <dialog id="alert-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-head"><div><p class="panel-kicker">Detection detail</p><h2 id="dialog-title">Alert investigation</h2></div><button id="dialog-close" type="button" aria-label="Close alert details">×</button></div>
+    <div class="dialog-content" id="dialog-content"></div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
