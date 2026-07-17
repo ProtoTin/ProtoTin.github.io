@@ -435,6 +435,14 @@ section:nth-of-type(even) { background-color: var(--bg-secondary); }
   gap: 20px;
 }
 
+.section-intro {
+  max-width: 760px;
+  margin: -26px 0 32px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
 .project-card {
   background-color: var(--bg-card);
   border: 1px solid var(--border);
