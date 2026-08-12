@@ -209,34 +209,56 @@
     <section id="self-directed-projects" aria-label="Self-Directed Projects">
       <div class="container">
         <h2 class="section-title"><span class="accent">//</span> Self-Directed Projects</h2>
-        <p class="section-intro">Independent projects I directed and developed using AI-assisted tools to explore security operations, detection workflows, and practical cybersecurity tooling.</p>
-        <div class="projects-grid">
+        <p class="section-intro">Independent work where I defined the security problem, directed a phased build, tested real behavior, reviewed failures, and validated the final deployment using an AI-assisted development workflow.</p>
 
-          <article class="project-card project-card--featured">
+        <article class="project-card project-card--featured featured-project">
+          <a class="featured-project-preview" href="https://phishguard-ai-prototin.onrender.com/" target="_blank" rel="noopener noreferrer" aria-label="Open the live PhishGuard AI demo">
+            <img src="https://raw.githubusercontent.com/ProtoTin/phishguard-ai/main/src/phishguard/static/og.png" alt="PhishGuard shield and explainable phishing analysis interface" loading="lazy" />
+            <span class="live-demo-badge"><i aria-hidden="true"></i> Live demo</span>
+          </a>
+
+          <div class="featured-project-content">
             <div class="project-header">
-              <span class="project-date">FEATURED INTERACTIVE PROJECT</span>
-              <h3 class="project-title">SentinelOps Security Operations Dashboard</h3>
+              <span class="project-date">AI &amp; CYBERSECURITY · PUBLIC PROJECT</span>
+              <h3 class="project-title featured-project-title">PhishGuard AI</h3>
             </div>
-            <ul class="project-bullets">
-              <li>Built a responsive SOC overview with simulated alert telemetry, severity distribution, asset health, and incident-response activity.</li>
-              <li>Added interactive time-range controls, severity filters, and alert investigation details mapped to MITRE ATT&amp;CK techniques.</li>
-            </ul>
-            <a class="project-launch" href="security-dashboard/">Launch dashboard <span aria-hidden="true">→</span></a>
-          </article>
 
-          <article class="project-card project-card--featured">
-            <div class="project-header">
-              <span class="project-date">FEATURED INTERACTIVE PROJECT</span>
-              <h3 class="project-title">Northstar Security Control Assessment</h3>
+            <p class="project-summary">An explainable phishing-risk analysis system for pasted email text and URLs. It combines calibrated machine-learning models with deterministic security rules to return a 0–100 risk score, supporting evidence, and an advisory response.</p>
+
+            <div class="project-role">
+              <strong>My contribution</strong>
+              <p>I scoped the project and its phased requirements, made security and product decisions, manually tested public behavior, reviewed false-positive and false-negative cases, and directed fixes through production verification. Implementation was completed with OpenAI Codex as the development partner.</p>
             </div>
-            <ul class="project-bullets">
-              <li>Built an interactive NIST CSF 2.0 assessment spanning Govern, Identify, Protect, Detect, Respond, and Recover.</li>
-              <li>Calculates function-level maturity, identifies control gaps, and generates a phased remediation roadmap for a fictional small organization.</li>
-            </ul>
-            <a class="project-launch" href="security-control-assessment/">Launch assessment <span aria-hidden="true">→</span></a>
-          </article>
 
-        </div>
+            <ul class="project-evidence" aria-label="Verified project results">
+              <li><strong>88</strong><span>automated tests</span></li>
+              <li><strong>92.49%</strong><span>test coverage</span></li>
+              <li><strong>2</strong><span>email &amp; URL classifiers</span></li>
+            </ul>
+
+            <ul class="project-tech" aria-label="Technologies used">
+              <li>Python</li>
+              <li>FastAPI</li>
+              <li>scikit-learn</li>
+              <li>Docker</li>
+              <li>GitHub Actions</li>
+              <li>CodeQL</li>
+              <li>Render</li>
+            </ul>
+
+            <div class="project-actions">
+              <a class="btn btn-primary" href="https://phishguard-ai-prototin.onrender.com/" target="_blank" rel="noopener noreferrer">Open Live Demo <span aria-hidden="true">↗</span></a>
+              <a class="btn btn-outline" href="https://github.com/ProtoTin/phishguard-ai" target="_blank" rel="noopener noreferrer">Source Code <span aria-hidden="true">↗</span></a>
+              <a class="project-report-link" href="https://github.com/ProtoTin/phishguard-ai/blob/main/docs/production-verification.md" target="_blank" rel="noopener noreferrer">Production verification <span aria-hidden="true">→</span></a>
+            </div>
+
+            <div class="project-disclosure">
+              <strong>Educational project scope</strong>
+              <p>PhishGuard AI is an actively evolving, small-scale educational project built to explore explainable phishing detection, secure API development, machine-learning evaluation, and deployment. It performs offline analysis of pasted email text and URLs and does not use live threat intelligence, inspect destination websites, scan files, or replace commercial security platforms. Results are advisory and may include false positives or false negatives.</p>
+            </div>
+            <p class="project-caveat">The free live demo may take about a minute to wake after inactivity.</p>
+          </div>
+        </article>
       </div>
     </section>
 
