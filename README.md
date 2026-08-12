@@ -1,51 +1,11 @@
 # Tin Aung — Cybersecurity Portfolio
 
-Personal portfolio website for Tin Aung, U.S. Navy veteran and cybersecurity engineering graduate of the University of San Diego.
+[View the live portfolio](https://prototin.github.io/)
+
+This portfolio presents my cybersecurity background, technical skills, certifications, U.S. Navy experience, academic security labs, and self-directed PhishGuard AI project. It is designed to give employers a concise view of my hands-on experience in security monitoring, intrusion detection, vulnerability assessment, system hardening, and AI-assisted cybersecurity development.
+
+The site is built with HTML, CSS, and JavaScript and is published through GitHub Pages.
 
 ## Development Disclosure
 
 The site's direction, professional content, and final decisions are Tin Aung's. The design and code were created with OpenAI Codex. PhishGuard AI is a self-directed, AI-assisted cybersecurity project; Tin defined the scope, directed the phased work, tested system behavior, reviewed model failures, and validated the public deployment.
-
-## Stack
-
-Plain HTML5, CSS3, and vanilla JavaScript. No frameworks, no build tools, no dependencies.
-
-## Structure
-
-```
-portfolio/
-├── index.html          # Main entry point
-├── css/
-│   └── style.css       # All styles (dark theme, fully responsive)
-├── js/
-│   └── main.js         # Mobile nav toggle + active scroll highlight
-├── security-dashboard/ # Interactive SentinelOps SOC dashboard
-├── security-control-assessment/ # NIST CSF 2.0 assessment and roadmap tool
-├── assets/
-│   └── icons/          # Placeholder for icons or images
-└── README.md
-```
-
-## Running Locally
-
-Open `index.html` directly in a browser, or serve with any static file server:
-
-```bash
-python3 -m http.server 8080
-# then open http://localhost:8080
-```
-
-## Deploying
-
-Drop the directory onto any static host — GitHub Pages, Netlify, Cloudflare Pages, etc. No build step needed.
-
-## Sections
-
-- **Hero** — Name, title, tagline, GitHub and LinkedIn links
-- **About** — Education, military background, focus areas
-- **Certifications** — CompTIA Security+ and CySA+
-- **Technical Skills** — Grouped by category
-- **Self-Directed Projects** — PhishGuard AI live demo, source, and verified results
-- **Academic Projects** — Five lab/academic projects as cards
-- **Experience** — U.S. Navy timeline entry
-- **Contact** — Email, GitHub, LinkedIn
